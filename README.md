@@ -12,10 +12,10 @@ At [Nodle](https://nodle.com) our goal is to enable all kinds of apps to earn re
 
 Please refer to our SDK documentation [here](https://developer.nodle.com/nodle-sdk/). 
 
+## Unity Plugin
+
+This plugin was developed by Proxy42
+
 ## Support
 
 Have questions? We're here to help! Email us at [support@nodle.com](mailto:support@nodle.com).
-
-##NodleSDK Unity Plugin
-
-This plugin was developed by Proxy42.

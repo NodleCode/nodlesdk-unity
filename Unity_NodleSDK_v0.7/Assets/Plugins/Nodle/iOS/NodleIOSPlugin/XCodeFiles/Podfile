@@ -1,0 +1,25 @@
+
+
+platform :ios, '13.0'
+
+target 'UnityFramework' do
+  use_frameworks! 
+
+  pod 'NodleSDK', '0.0.14'
+  pod 'SQLite.swift', '~> 0.13.3'
+  pod 'SwiftCBOR', '~> 0.4.5'
+  pod 'SwiftProtobuf', '~> 1.19.0'
+  target 'Unity-iPhone' do
+  end
+end
+
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if target.name == "SQLite.swift" or target.name == "SwiftCBOR" or  target.name == "SwiftProtobuf" or target.name == "NodleSDK"
+        target.build_configurations.each do |config|
+          config.build_settings["BUILD_LIBRARY_FOR_DISTRIBUTION"] = "YES"
+        end
+      end
+    end
+  end
